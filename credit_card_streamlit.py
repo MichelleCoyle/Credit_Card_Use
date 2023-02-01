@@ -13,7 +13,7 @@ with header:
 	st.text('This project looks at customer age vs credit score to classify card users into 1 of 3 categories;\nregular card user, infrequent card user, or big purchaser.')
 
 st.write("# Predict user category✨")
-st.write("### Determine user:")
+st.write("#### Determine user:")
 
 # Customer credit score
 score = st.slider('Customer score', min_value=550, max_value=850, value=550, step=1)
