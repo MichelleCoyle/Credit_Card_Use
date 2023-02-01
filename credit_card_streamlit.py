@@ -10,7 +10,7 @@ model = st.container()
 
 with header:
 	st.title('Credit Card Use')
-	st.text('This project looks at customer age vs credit score to classify card users into\n1 of 3 categories; regular card user, infrequent card user, or big purchaser.')
+	st.text('This project looks at customer age vs credit score to classify card users into\n1 of 3 categories; regular card user, infrequent card user, or frequent user.')
 
 st.write("## Predict user category✨")
 st.write("#### Determine user:")
@@ -23,9 +23,9 @@ age = st.slider('Customer age', min_value=20, max_value=65, value=20, step = 1)
 
 
 st.write("##### User types:")
-st.write("###### Type-0: Big Spender")
-st.write("###### Type-1: Infrequent Spender")
-st.write("###### Type-2: Regular Spender")
+st.write("###### Type-0: Frequent User")
+st.write("###### Type-1: Infrequent User")
+st.write("###### Type-2: Regular User")
 
 
 row = [score, age]
