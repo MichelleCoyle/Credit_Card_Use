@@ -22,10 +22,10 @@ score = st.slider('Customer score', min_value=550, max_value=850, value=550, ste
 age = st.slider('Customer age', min_value=20, max_value=65, value=20, step = 1)
 
 
-st.write("### User types:")
-st.write("#### Type-0: Big Spender")
-st.write("#### Type-1: Infrequent Spender")
-st.write("#### Type-2: Regular Spender")
+st.write("#### User types:")
+st.write("##### Type-0: Big Spender")
+st.write("##### Type-1: Infrequent Spender")
+st.write("##### Type-2: Regular Spender")
 
 
 row = [score, age]
