@@ -37,7 +37,7 @@ st.table(user_category)
 if st.button(label="Click to Predict"):
 
     # Load the model
-    loaded_model = pickle.load(open('credit_card_model','rb'))
+    loaded_model = pickle.load(open('credit_card_model.sav','rb'))
     
     # Make predictions (and get out pred probabilities)
     pred = loaded_model.predict(user_category)[0]
