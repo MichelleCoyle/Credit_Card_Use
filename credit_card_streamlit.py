@@ -26,22 +26,22 @@ age = st.slider('Customer age', min_value=20, max_value=65, value=20, step = 1)
 row = [score, age]
 columns = ['score', 'age']
 
-user_category = pd.DataFrame(dict(zip(columns, row)), index=[0])
+user_info = pd.DataFrame(dict(zip(columns, row)), index=[0])
 
 # Show the table?
-st.table(user_category)
+st.table(user_info)
 
 
 
-# Now predicting!
+# Now predicting
 if st.button(label="Click to Predict"):
 
     # Load the model
     loaded_model = pickle.load(open('credit_card_model.sav','rb'))
     
-    # Make predictions (and get out pred probabilities)
-    pred = loaded_model.predict(user_category)[0]
+    # Make predictions 
+    pred = loaded_model.predict(user_info)[0]
     
-    st.write(f"User category: {pred:,.0f} user-type ")
+    st.write(f"User category: {pred:,.0f}-type user")
 
 
