@@ -12,7 +12,7 @@ with header:
 	st.title('Credit Card Use')
 	st.text('This project looks at customer age vs credit score to classify card users into 1 of 3 categories;\nregular card user, infrequent card user, or big purchaser.')
 
-st.write("# Predict user category✨")
+st.write("## Predict user category✨")
 st.write("#### Determine user:")
 
 # Customer credit score
