@@ -42,6 +42,6 @@ if st.button(label="Click to Predict"):
     # Make predictions (and get out pred probabilities)
     pred = loaded_model.predict(user_category)[0]
     
-    st.write(f"Predicted Unit Sales📊: {pred:,.0f} units ")
+    st.write(f"User ctegort: {pred:,.0f} user-type ")
 
 
