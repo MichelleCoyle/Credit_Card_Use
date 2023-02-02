@@ -44,21 +44,21 @@ if st.button(label="Click to predict user-type"):
 
     # Make predictions (and get out pred probabilities)
     pred = loaded_model.predict(user_info)[0]
-    proba = loaded_model.predict_proba(user_info)[:,2][0]
+    
 
   
 # Sharing the predictions
     if pred == 0:
-        st.write("###Frequent credit card user")
-        st.write(f"Predicted probability of churn: {proba*100:.2f} %")
+        st.write("### Frequent credit card user")
+        
 
     elif pred == 1:
-        st.write("###Infrequent credit card user")
-        st.write(f"Predicted probability of churn: {proba*100:.2f} %")
+        st.write("### Infrequent credit card user")
+        
 	
     elif pred == 2:
         st.write("### Regular credit card user")
-        st.write(f"Predicted probability of churn: {proba*100:.2f} %")
+        
 
 
 
