@@ -44,11 +44,11 @@ if pred == 0:
         st.write("### Frequent credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
 
-    elif pred == 1:
+elif pred == 1:
         st.write("### Infrequent credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
 	
-    elif pred == 2:
+elif pred == 2:
         st.write("### Regular credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
 
