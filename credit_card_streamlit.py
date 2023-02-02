@@ -40,6 +40,11 @@ user_info = pd.DataFrame(dict(zip(columns, row)), index=[0])
 
 # Now predicting
 
+if st.button(label="Click to Predict"):
+
+    # Load the model
+    loaded_model = pickle.load(open('credit_card_model.sav','rb'))
+
 if pred == 0:
         st.write("### Frequent credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
