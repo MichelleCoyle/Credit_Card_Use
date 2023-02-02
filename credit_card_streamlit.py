@@ -40,7 +40,7 @@ user_info = pd.DataFrame(dict(zip(columns, row)), index=[0])
 if st.button(label="Click to predict user-type"):
 
     # Load the model
-    loaded_model = pickle.load(open('credit_card_model.sav.sav', 'rb'))
+    loaded_model = pickle.load(open('credit_card_model.sav', 'rb'))
 
     # Make predictions (and get out pred probabilities)
     pred = loaded_model.predict(user_info)[0]
