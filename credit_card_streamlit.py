@@ -22,12 +22,6 @@ score = st.slider('Customer score', min_value=550, max_value=850, value=550, ste
 age = st.slider('Customer age', min_value=20, max_value=65, value=20, step = 1)
 
 
-# st.write("##### User types:")
-# st.write("###### Type-0: Frequent User")
-# st.write("###### Type-1: Infrequent User")
-# st.write("###### Type-2: Regular User")
-
-
 row = [score, age]
 columns = ['score', 'age']
 
@@ -59,26 +53,3 @@ if st.button(label="Click to predict user-type"):
     elif pred == 2:
         st.write("### Regular credit card user")
         
-
-
-
-
-
-
-
-
-
-
-
-
-# if st.button(label="Click to Predict"):
-
-#     # Load the model
-#     loaded_model = pickle.load(open('credit_card_model.sav','rb'))
-    
-#     # Make predictions 
-#     pred = loaded_model.predict(user_info)[0]
-    
-#     st.write(f"User category: Type-{pred:,.0f} user")
-
-
