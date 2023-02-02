@@ -39,14 +39,35 @@ user_info = pd.DataFrame(dict(zip(columns, row)), index=[0])
 
 
 # Now predicting
-if st.button(label="Click to Predict"):
 
-    # Load the model
-    loaded_model = pickle.load(open('credit_card_model.sav','rb'))
+ if pred == 0:
+        st.write("### Frequent credit card user")
+        st.write(f"Predicted probability of churn: {proba*100:.2f} %")
+
+    elif pred == 1:
+        st.write("### Infrequent credit card user")
+        st.write(f"Predicted probability of churn: {proba*100:.2f} %")
+	
+    elif pred == 1:
+        st.write("### Regular credit card user")
+        st.write(f"Predicted probability of churn: {proba*100:.2f} %")
+
+
+
+
+
+
+
+
+
+# if st.button(label="Click to Predict"):
+
+#     # Load the model
+#     loaded_model = pickle.load(open('credit_card_model.sav','rb'))
     
-    # Make predictions 
-    pred = loaded_model.predict(user_info)[0]
+#     # Make predictions 
+#     pred = loaded_model.predict(user_info)[0]
     
-    st.write(f"User category: Type-{pred:,.0f} user")
+#     st.write(f"User category: Type-{pred:,.0f} user")
 
 
