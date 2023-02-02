@@ -40,7 +40,7 @@ user_info = pd.DataFrame(dict(zip(columns, row)), index=[0])
 
 # Now predicting
 
- if pred == 0:
+if pred == 0:
         st.write("### Frequent credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
 
@@ -48,7 +48,7 @@ user_info = pd.DataFrame(dict(zip(columns, row)), index=[0])
         st.write("### Infrequent credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
 	
-    elif pred == 1:
+    elif pred == 2:
         st.write("### Regular credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
 
