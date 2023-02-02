@@ -22,10 +22,10 @@ score = st.slider('Customer score', min_value=550, max_value=850, value=550, ste
 age = st.slider('Customer age', min_value=20, max_value=65, value=20, step = 1)
 
 
-st.write("##### User types:")
-st.write("###### Type-0: Frequent User")
-st.write("###### Type-1: Infrequent User")
-st.write("###### Type-2: Regular User")
+# st.write("##### User types:")
+# st.write("###### Type-0: Frequent User")
+# st.write("###### Type-1: Infrequent User")
+# st.write("###### Type-2: Regular User")
 
 
 row = [score, age]
@@ -36,26 +36,32 @@ user_info = pd.DataFrame(dict(zip(columns, row)), index=[0])
 # Show the table?
 # st.table(user_info)
 
-
-
-# Now predicting
-
-if st.button(label="Click to Predict"):
+# Now predicting!
+if st.button(label="Click to predict user-type"):
 
     # Load the model
-    loaded_model = pickle.load(open('credit_card_model.sav','rb'))
+    loaded_model = pickle.load(open('credit_card_model.sav.sav', 'rb'))
 
-if pred == 0:
-        st.write("### Frequent credit card user")
+    # Make predictions (and get out pred probabilities)
+    pred = loaded_model.predict(user_info)[0]
+    proba = loaded_model.predict_proba(user_info)[:,2][0]
+
+  
+# Sharing the predictions
+    if pred == 0:
+        st.write("###Frequent credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
 
-elif pred == 1:
-        st.write("### Infrequent credit card user")
+    elif pred == 1:
+        st.write("###Infrequent credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
 	
-elif pred == 2:
+    elif pred == 2:
         st.write("### Regular credit card user")
         st.write(f"Predicted probability of churn: {proba*100:.2f} %")
+
+
+
 
 
 
